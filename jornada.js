@@ -1,36 +1,42 @@
-//- "gets" : lê UMA linha com dado(s) de entrada (inputs) do usuário;
-//- "print": imprime um texto de saída (output), pulando linha.
+let heroi= "Spider Man";
+let nivel = 5200;
+let rank=""
 
-const passos=parseInt(gets());
-const jornada=parseInt(gets());
-
-const posicaoFinal = passos+jornada;
-
-
-print("Posicao final do heroi:"+posicaoFinal);
-//ou  console.log("Posicao final do heroi:"+posicaoFinal);
-
-
-// variaveis
-let fruta = "Banana";
-
-switch(fruta){
-    case("Laranja"):{
-        print("Suco de Laranja");
+switch (true){
+    case (nivel>=0 && nivel<=1000): {
+        console.log ("Ferro");
+        rank="Ferro";
         break;
     }
-    case"Banana":{
-        print("Vitamina de Banana")
+    case (nivel>=1001&& nivel<=2000): {
+        rank="Bronze"; 
         break;
     }
-    case"Maçã":{
-        print("Suco de Maça")
+    case (nivel>=2001&& nivel<=5000): {
+        rank="Prata";
         break;
     }
-    case"Laranja":{
-        print("Suco de Laranja")
+    case (nivel>=5001&& nivel<=7000): {
+        rank="Ouro";
         break;
     }
-    default: print("incorreto")
-
+    case (nivel>=7000&& nivel<=8000):{
+        rank= "Platina";
+        break;
+    }
+    case (nivel>=8001&& nivel<=9000): {
+        rank="Ascendente";
+        break;
+    }
+    case (nivel>=9001&& nivel<=10000): {
+        rank="Imortal";
+        break;
+    }
+    case (nivel>=10000&& nivel>100000):{
+        rank="Radiante";
+        break;
+    }
+    default:rank="Nivel Desconhecido";
 }
+
+console.log("O Herói de nome "+ heroi +" está no nível de " + rank);
